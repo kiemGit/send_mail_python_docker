@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  mailer_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data.json:/app/data.json  # Bind mount JSON file
+    restart: always
